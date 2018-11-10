@@ -15,14 +15,6 @@ a:hover{
  box-shadow: 5px 5px 0 #DADADA;
  padding-bottom: 20px;
 }
-.form__error {
-    color: white;
-    text-align: center;
-    font-size: 15px;
-    display: block;
-    margin-top: 3px;
-    display: none;
-}
 input[type="text"],input[type="password"],input[type="tel"], input[type="email"]{
  margin: 15px auto 0 auto;
  width: 300px;
@@ -49,15 +41,3 @@ input[type="text"],input[type="password"],input[type="tel"], input[type="email"]
  background: #fff;
  color: #000000;
 }
-input:invalid:not(:placeholder-shown) + .form__error {
-	display: block;
-}
-input:valid:not(:placeholder-shown) {
-	border-color: green;
-}
-
-input:invalid:not(:placeholder-shown) {
-	border-color: red;
-}
-
-

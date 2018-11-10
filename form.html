@@ -1,23 +1,25 @@
 <html lang="ru">
 <head>
+	<script src="validate.js"></script>
 	<meta charset="UTF-8">
 	<title>TestFormNik</title>
 	<link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
+
 <body>
 
 <div class="container">
-	<form method="GET" action="logpassview.html">
+		<form action="logpassview.html" method="GET" onsubmit="return PassWord()&&ValidMail(); 	">
 		<div class="dws-input">
-			<input type="email" name="useremail" placeholder="Введите почту"/>
-		 	<span class="form__error">Это поле должно содержать E-Mail в формате example@site.com</span>
+			<input type="text" id="mail" name="useremail" placeholder="Введите почту или телефон"/>
+		 	<p id="mes" >Формат name@site.ru или +7/8xxxxxxxxxx</p>
 		</div>
 		
 		<div class="dws-input">
-			<input type="password" name="password" pattern=".*[0-9].*" placeholder="Введите пароль" required/>
-   			<span class="form__error">Это поле должно содержать хотя бы одну цифру.</span>
+			<input type="password" id="pass"  name="password" placeholder="Введите пароль"/>
+   			<p id="mes2" >Это поле должно содержать хотя бы одну цифру. 6-30 символов.</p>
 		</div>
-		<input class="dws-submit" type="submit" name="submit" value="ВОЙТИ"> <br />
+		<input class="dws-submit" type="submit" name="submit" value="ВОЙТИ" "> <br />
 		<a href="#">Восстановить пароль</a>
 	</form>
 </div>

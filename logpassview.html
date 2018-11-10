@@ -11,13 +11,12 @@
             var pass = url.split("=")[2].split("&")[0];
             var email =  url.split("=")[1].split("&")[0];
             var passFib = parseInt(/[0-9]+/.exec(pass));
- 			 var a = 1, b = 1;
-  		for (var i = 3; i <= passFib; i++) {
-   			 var c = a + b;
-   			 a = b;
-   			 b = c;
-  		 }
-            document.getElementById("UsInfo").innerHTML = email + '</br>' + pass + '</br>' + b;
+ 			 var n = passFib; 
+				var fibonacci = [1, 1]; 
+						for (i = 2; i < n; i ++) {  
+  							fibonacci[i] = fibonacci[i-1] + fibonacci[i-2];
+}
+            document.getElementById("UsInfo").innerHTML = email + '</br>' + pass + '</br>' + fibonacci.slice(0,n);
 
         }
     </script>
