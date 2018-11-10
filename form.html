@@ -3,16 +3,21 @@
 	<meta charset="UTF-8">
 	<title>TestFormNik</title>
 	<link rel="stylesheet" href="css/style.css" type="text/css">
-	<link rel="stylesheet" href="css/font-awesome.css" type="text/css">
 </head>
 <body>
 <div class="container">
 	<form>
 		<div class="dws-input">
-			<input type="text" name="username" placeholder="Введите логин">
+			<input type="email" name="useremail" placeholder="Введите почту"/>
+		 	<span class="form__error">Это поле должно содержать E-Mail в формате example@site.com</span>
 		</div>
 		<div class="dws-input">
-			<input type="password" name="password" placeholder="Введите пароль">
+			<input type="tel" name="number" pattern="(\+7|8)[0-9]{10}" placeholder="Введите телефон"/>
+			<span class="form__error">Это поле должно содержать номер телефона в формате 8(+7)9277343434</span>
+		</div>
+		<div class="dws-input">
+			<input type="password" name="password" pattern=".*[0-9].*" placeholder="Введите пароль" required/>
+   			<span class="form__error">Это поле должно содержать хотя бы одну цифру.</span>
 		</div>
 		<input class="dws-submit" type="submit" name="submit" value="ВОЙТИ"><br />
 		<a href="#">Восстановить пароль</a>
