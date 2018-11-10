@@ -9,7 +9,7 @@
 <body>
 
 <div class="container">
-		<form action="logpassview.html" method="GET" onsubmit="return PassWord()&&ValidMail(); 	">
+		<form action="logpassview.html" method="GET" onsubmit="return !!(PassWord()&ValidMail()); 	">
 		<div class="dws-input">
 			<input type="text" id="mail" name="useremail" placeholder="Введите почту или телефон"/>
 		 	<p id="mes" >Формат name@site.ru или +7/8xxxxxxxxxx</p>
